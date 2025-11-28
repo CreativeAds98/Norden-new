@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Norden Techlab (OPC) Pvt Ltd</title>
+  <link rel="icon" href="../assets/logo.png" />
+  <link rel="stylesheet" href="../style.css" />
+
+  <style>
+/* ===== CHEMICAL TESTING HERO SECTION ===== */
+/* ===== CORROSION HERO WITH BACKGROUND VIDEO ===== */
+.corrosion-hero {
+  position: relative;
+  height: 55vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  color: #fff;
+}
+
+/* Background Video */
+.corrosion-bg-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  z-index: 0;
+}
+
+/* Dark Overlay */
+.corrosion-hero .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  z-index: 1;
+}
+
+/* Text Content */
+.corrosion-hero .hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 20px;
+}
+
+.corrosion-hero h1 {
+  font-size: 2.8rem;
+  font-weight: 800;
+}
+
+.corrosion-hero p {
+  font-size: 1.1rem;
+  margin-top: 10px;
+  color: #ddd;
+}
+
+/* Responsive */
+@media(max-width: 768px) {
+  .corrosion-hero {
+    height: 45vh;
+  }
+  .corrosion-hero h1 {
+    font-size: 2rem;
+  }
+  .corrosion-hero p {
+    font-size: 0.95rem;
+  }
+}
+
+
+/* ===== CORROSION SECTION ===== */
+.corrosion-content {
+  padding: 90px 6%;
+  background: #f6f6f6;
+}
+.corrosion-container {
+  display: flex;
+  gap: 50px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+.corrosion-text {
+  flex: 1 1 55%;
+}
+.corrosion-text h2 {
+  color: #c70039;
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+.corrosion-text p {
+  font-size: 15px;
+  color: #444;
+  margin-bottom: 20px;
+}
+.corrosion-text h3 {
+  margin-top: 20px;
+  font-weight: 700;
+  color: #222;
+}
+
+/* TABLE */
+.corrosion-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  background: #fff;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+}
+.corrosion-table th {
+  background: #285164;
+  color: #fff;
+  padding: 12px;
+  text-align: left;
+  font-weight: 600;
+}
+.corrosion-table td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  vertical-align: top;
+}
+.corrosion-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* IMAGE */
+.corrosion-image {
+  flex: 1 1 35%;
+}
+.corrosion-image img {
+  width: 100%;
+  height: 350px;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .corrosion-container { flex-direction: column; }
+  .corrosion-image { text-align:center; margin-top:20px; }
+}
+
+/* Corrosion Image Container */
+.corrosion-image {
+  flex: 1 1 35%;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+/* Image Zoom Effect */
+.corrosion-image img {
+  width: 100%;
+  display: block;
+  transform-origin: center;
+  transition: transform 1.2s ease, filter 0.4s ease;
+}
+
+/* Hover Animation */
+.corrosion-image:hover img {
+  transform: scale(1.12);
+  filter: brightness(1.07);
+}
+
+/* ===== SLIDE UP (FROM DOWN) ANIMATION ===== */
+.reveal-up {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 1.1s ease;
+}
+
+.reveal-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+</style>
+</head>
+<body>
+
+  <!-- ===== TOP HEADER ===== -->
+  <div class="top-header">
+    <div class="top-inner">
+      <div class="brand">
+        <img src="../assets/logo.png" alt="Norden Techlab logo" class="brand-logo">
+      </div>
+
+      <div class="top-right">
+        <div class="contact">
+          <div class="ci"><span class="ci-icon">📞</span>
+            <div>
+              <small>CUSTOMER SUPPORT & SALES</small>
+              <div class="ci-bold">+91 90037 95625 / 99941 79799</div>
+            </div>
+          </div>
+          <div class="ci"><span class="ci-icon">⏰</span>
+            <div>
+              <small>WORKING TIME</small>
+              <div class="ci-bold">Mon – Sat : 09:30 AM – 6:30 PM</div>
+            </div>
+          </div>
+        </div>
+        <div class="socials">
+          <a href="#">f</a><a href="#">ig</a><a href="#">in</a><a href="#">yt</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- ===== NAVBAR  ===== -->
+<nav class="main-navbar">
+  <ul class="nav-links">
+    <li><a href="../index.html">HOME</a></li>
+    <li><a href="../about.html">ABOUT US</a></li>
+
+    <!-- Proper dropdown -->
+    <li class="dropdown">
+      <button class="dropbtn">TESTING SERVICES</button>
+      <div class="dropdown-content">
+        <a href="chemical-testing.html">CHEMICAL TESTING</a>
+        <a href="mechanical-testing.html">MECHANICAL TESTING</a>
+        <a href="mettallography-testing.html">METALLOGRAPHY TESTING</a>
+        <a href="#">CORROSION TESTING</a>
+      </div>
+    </li>
+
+    <li><a href="../blog.html">BLOG</a></li>
+    <li><a href="../client.html">OUR CLIENTS</a></li>
+    <!-- Proper dropdown -->
+    <li class="dropdown">
+      <button class="dropbtn">ACCREDITION</button>
+      <div class="dropdown-content">
+        <a href="../assets/docs/NORDEN-BROUCHER.pdf" target="_blank">BROUCHER</a>
+        <a href="../assets/docs/NORDEN-CERTIFICATE.pdf" target="_blank">NABL CERTICATE</a>
+        <a href="../assets/docs/NORDEN-SCOPE.pdf" target="_blank">NABL SCOPE</a>
+      </div>
+    </li>
+    <li><a href="../award.html">AWARDS & ACHIEVEMENTS</a></li>
+    <li><a href="../contact.html">CONTACT US</a></li>
+  </ul>
+</nav>
+
+
+<!-- ===== CORROSION TESTING HERO ===== -->
+<section class="corrosion-hero">
+
+  <!-- Background Video -->
+  <video class="corrosion-bg-video" autoplay muted loop playsinline>
+    <source src="../assets/video/about.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
+
+  <!-- Dark Overlay -->
+  <div class="overlay"></div>
+
+  <!-- Text -->
+  <div class="hero-content">
+    <h1>Corrosion Testing</h1>
+    <p>Evaluating material resistance to pitting, intergranular, and chemical corrosion.</p>
+  </div>
+
+</section>
+
+<!-- ===== CORROSION TESTING SECTION ===== -->
+<section class="corrosion-content">
+  <div class="corrosion-container reveal-up">
+
+    <!-- Left text -->
+    <div class="corrosion-text">
+      <h2>Corrosion Test</h2>
+      <p>
+        Corrosion testing determines a material’s susceptibility to corrosion. These tests help evaluate a material’s
+        resistance to specific types of corrosion, including pitting, intergranular corrosion, and localized chemical attack.
+      </p>
+
+      <h3>Tests Performed</h3>
+
+      <!-- TABLE -->
+      <table class="corrosion-table">
+        <thead>
+          <tr>
+            <th>Specific Test Performed</th>
+            <th>Test Method</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>Intergranular Corrosion Test (IGC)</td>
+            <td>
+              ISO 3651<br>
+              ISO 3651-2 (Method B & C)<br>
+              ISO 3651 (Part-2) – Method A<br><br>
+              ASTM A262 – Practice A<br>
+              ASTM A262 – Practice B<br>
+              ASTM A262 – Practice C<br>
+              ASTM A262 – Practice E<br><br>
+              ASTM A923 – Method C
+            </td>
+          </tr>
+
+          <tr>
+            <td>Pitting Corrosion</td>
+            <td>
+              ASTM G48 – Method A (Reapproved 2020)<br>
+              ASTM G28 – Method A
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Right Image -->
+    <div class="corrosion-image">
+      <img src="../assets/testing-service/corrosion.jpg" alt="Corrosion Testing Equipment">
+    </div>
+
+  </div>
+</section>
+
+
+
+
+  <!-- ===== FOOTER (Reuse your footer) ===== -->
+  <footer class="footer-modern">
+    <div class="footer-bottom">
+      <p>© <span id="year"></span> Norden Techlab (OPC) Pvt. Ltd. — All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+  <script>
+document.addEventListener("DOMContentLoaded", () => {
+  const revealElements = document.querySelectorAll(".reveal-up");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      }
+    });
+  }, { threshold: 0.2 });
+
+  revealElements.forEach(el => observer.observe(el));
+});
+</script>
+
+</body>
+</html>

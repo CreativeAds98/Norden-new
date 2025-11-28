@@ -1,0 +1,698 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Norden Techlab (OPC) Pvt Ltd</title>
+  <link rel="icon" href="../assets/logo.png" />
+  <link rel="stylesheet" href="../style.css" />
+
+  <style>
+/* =========================================================
+   MECHANICAL TESTING — CLEAN, PREMIUM STYLE
+   ========================================================= */
+
+/* ===== MECHANICAL HERO WITH BACKGROUND VIDEO ===== */
+.mech-hero {
+  position: relative;
+  height: 55vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  color: #fff;
+}
+
+/* Background video */
+.mech-bg-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  z-index: 0;
+}
+
+/* Overlay */
+.mech-hero .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  z-index: 1;
+}
+
+/* Content */
+.mech-hero .hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  padding: 20px;
+}
+
+.mech-hero h1 {
+  font-size: 2.8rem;
+  font-weight: 800;
+}
+
+.mech-hero p {
+  font-size: 1.1rem;
+  margin-top: 10px;
+  color: #eaeaea;
+}
+
+/* Responsive */
+@media(max-width: 768px) {
+  .mech-hero {
+    height: 45vh;
+  }
+  .mech-hero h1 {
+    font-size: 2rem;
+  }
+  .mech-hero p {
+    font-size: 1rem;
+  }
+}
+
+
+/* ===== MAIN SECTION ===== */
+.mech-content {
+  padding: 80px 6%;
+  background: #f4f7f9;
+}
+
+/* A single test block */
+.mech-item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 40px;
+  margin-bottom: 80px;
+  padding-bottom: 50px;
+  border-bottom: 1px solid #e3e8ea;
+}
+
+.mech-item:last-child {
+  border-bottom: none;
+}
+
+/* Left Column */
+.mech-left {
+  flex: 1 1 55%;
+}
+
+.mech-left h2 {
+  font-size: 1.9rem;
+  font-weight: 800;
+  color: #c70039;
+  margin-bottom: 12px;
+}
+
+.mech-left p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #3b3b3b;
+  margin-bottom: 20px;
+  max-width: 600px;
+}
+
+/* Dark info box (alternate sections) */
+.darkbox {
+  background: #254d5c;
+  padding: 30px 24px;
+  border-radius: 8px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+}
+
+.darkbox h2 {
+  color: #fff !important;
+}
+
+.darkbox p {
+  color: #e6f0f2;
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+/* Container */
+.mech-right {
+  flex: 1 1 40%;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+/* Image */
+.mech-right img {
+  width: 100%;
+  display: block;
+  transform-origin: center;
+  transition: transform 1.2s ease, filter 0.4s ease;
+}
+
+/* Hover Zoom Effect */
+.mech-right:hover img {
+  transform: scale(1.12);
+  filter: brightness(1.08);
+}
+
+
+/* Center column (for middle tables) */
+.mech-middle {
+  flex: 1 1 40%;
+}
+
+/* ===== CLEAN TABLE STYLE ===== */
+.mech-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.08);
+}
+
+.mech-table thead th {
+  background: #2b4e5a;
+  color: #fff;
+  padding: 14px 16px;
+  text-align: left;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+}
+
+.mech-table td {
+  padding: 14px 16px;
+  font-size: 14px;
+  color: #3d3d3d;
+  border-bottom: 1px solid #e9eef1;
+  line-height: 1.65;
+}
+
+.mech-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* Zebra striping for clarity */
+.mech-table tbody tr:nth-child(odd) {
+  background: #f9fbfc;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .mech-item {
+    flex-direction: column;
+    gap: 30px;
+    padding-bottom: 40px;
+  }
+
+  .mech-left, 
+  .mech-middle, 
+  .mech-right {
+    flex: 1 1 100%;
+  }
+
+  .mech-right img {
+    max-width: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  .mech-hero h1 {
+    font-size: 2rem;
+  }
+
+  .mech-hero p {
+    font-size: 0.95rem;
+  }
+
+  .mech-table td, 
+  .mech-table th {
+    font-size: 13px;
+  }
+}
+
+/* Mechanical Image Container */
+.mech-right {
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+/* Image Zoom Effect */
+.mech-right img {
+  width: 100%;
+  display: block;
+  transform-origin: center;
+  transition: transform 1.2s ease, filter 0.4s ease;
+}
+
+/* Hover Zoom */
+.mech-right:hover img {
+  transform: scale(1.12);
+  filter: brightness(1.07);
+}
+
+
+/* ===== FADE SLIDE EFFECT FOR EACH SECTION ===== */
+
+.mech-item {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.9s ease;
+}
+
+/* Left → Right animation */
+.mech-item.left-anim {
+  transform: translateX(-60px);
+}
+
+.mech-item.show.left-anim {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Right → Left animation */
+.mech-item.right-anim {
+  transform: translateX(60px);
+}
+
+.mech-item.show.right-anim {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Down → Up (default) */
+.mech-item.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+</style>
+</head>
+<body>
+
+  <!-- ===== TOP HEADER ===== -->
+  <div class="top-header">
+    <div class="top-inner">
+      <div class="brand">
+        <img src="../assets/logo.png" alt="Norden Techlab logo" class="brand-logo">
+      </div>
+
+      <div class="top-right">
+        <div class="contact">
+          <div class="ci"><span class="ci-icon">📞</span>
+            <div>
+              <small>CUSTOMER SUPPORT & SALES</small>
+              <div class="ci-bold">+91 90037 95625 / 99941 79799</div>
+            </div>
+          </div>
+          <div class="ci"><span class="ci-icon">⏰</span>
+            <div>
+              <small>WORKING TIME</small>
+              <div class="ci-bold">Mon – Sat : 09:30 AM – 6:30 PM</div>
+            </div>
+          </div>
+        </div>
+        <div class="socials">
+          <a href="#">f</a><a href="#">ig</a><a href="#">in</a><a href="#">yt</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- ===== NAVBAR  ===== -->
+<nav class="main-navbar">
+  <ul class="nav-links">
+    <li><a href="../index.html">HOME</a></li>
+    <li><a href="../about.html">ABOUT US</a></li>
+
+    <!-- Proper dropdown -->
+    <li class="dropdown">
+      <button class="dropbtn">TESTING SERVICES</button>
+      <div class="dropdown-content">
+        <a href="chemical-testing.html">CHEMICAL TESTING</a>
+        <a href="#">MECHANICAL TESTING</a>
+        <a href="mettallography-testing.html">METALLOGRAPHY TESTING</a>
+        <a href="corrosion-testing.html">CORROSION TESTING</a>
+      </div>
+    </li>
+
+    <li><a href="../blog.html">BLOG</a></li>
+    <li><a href="../client.html">OUR CLIENTS</a></li>
+    <!-- Proper dropdown -->
+    <li class="dropdown">
+      <button class="dropbtn">ACCREDITION</button>
+      <div class="dropdown-content">
+        <a href="../assets/docs/NORDEN-BROUCHER.pdf" target="_blank">BROUCHER</a>
+        <a href="../assets/docs/NORDEN-CERTIFICATE.pdf" target="_blank">NABL CERTICATE</a>
+        <a href="../assets/docs/NORDEN-SCOPE.pdf" target="_blank">NABL SCOPE</a>
+      </div>
+    </li>
+    <li><a href="../award.html">AWARDS & ACHIEVEMENTS</a></li>
+    <li><a href="../contact.html">CONTACT US</a></li>
+  </ul>
+</nav>
+
+<!-- ===== MECHANICAL TESTING HERO ===== -->
+<section class="mech-hero">
+
+  <!-- Background Video -->
+  <video class="mech-bg-video" autoplay muted loop playsinline>
+    <source src="../assets/video/about.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
+
+  <!-- Overlay -->
+  <div class="overlay"></div>
+
+  <!-- Text -->
+  <div class="hero-content">
+    <h1>Mechanical Testing</h1>
+    <p>Comprehensive mechanical testing services — tensile, bend, impact, hardness, welding qualification and more.</p>
+  </div>
+
+</section>
+
+
+<!-- ===== MECHANICAL TESTING CONTENT ===== -->
+<section class="mech-content">
+
+  <!-- Tensile Testing -->
+  <article class="mech-item">
+    <div class="mech-left">
+      <h2>Tensile Testing</h2>
+      <p>
+        Tensile testing determines material strength and ductility by applying axial force until fracture.
+        Commonly used to determine tensile strength, yield strength, elongation and reduction of area.
+      </p>
+
+      <table class="mech-table">
+        <thead>
+          <tr><th>Specific Test Performed</th><th>Test Method</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Tensile Strength / Yield Strength / Proof Strength (0.2% &amp; 1%) / % Elongation / % Reduction of Area</td>
+            <td>
+              IS 1608 – Part 1<br>
+              ISO 6892-1<br>
+              ISO 4136<br>
+              ASTM A370<br>
+              ASTM E8 / E8M<br>
+              ASTM B557M / ASTM B557<br>
+              AWS B 4.0<br>
+              ASME Sec IX<br>
+              AWS D1.1 / D1.1M
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="mech-right">
+      <img src="../assets/testing-service/tensile-testile.png" alt="Universal Tensile Testing Machine">
+    </div>
+  </article>
+
+  <!-- Bend Test -->
+  <article class="mech-item alt">
+    <div class="mech-left darkbox">
+      <h2>Bend Test</h2>
+      <p>The bend (flexural) test evaluates ductility and resistance to fracture under bending stress.</p>
+    </div>
+
+    <div class="mech-middle">
+      <table class="mech-table">
+        <thead>
+          <tr><th>Specific Test Performed</th><th>Test Method</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Bend Test</td>
+            <td>
+              IS 1599<br>
+              ISO 7438<br>
+              ISO 5173<br>
+              ASTM E290<br>
+              ASTM A370<br>
+              ASTM E190<br>
+              ASME Sec IX<br>
+              AWS D1.1 / D1.1M
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="mech-right">
+      <img src="../assets/testing-service/blend-test.png" alt="Bend Test Machine">
+    </div>
+  </article>
+
+  <!-- Hot Tensile (Elevated Temperature) -->
+  <article class="mech-item">
+    <div class="mech-left">
+      <h2>Hot Tensile — Elevated Temperature Testing</h2>
+      <p>Temperature range typically from 50°C to 900°C. Used to examine strength and ductility at elevated temperatures.</p>
+
+      <table class="mech-table">
+        <thead>
+          <tr><th>Specific Test Performed</th><th>Test Method</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Tensile Strength / Yield Strength / Proof Strength (0.2% &amp; 1%) / % Elongation / % Reduction of Area</td>
+            <td>
+              IS 1608 – Part 2<br>
+              ISO 6892-2<br>
+              ASTM E21
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="mech-right">
+      <img src="../assets/testing-service/hot-tensile.png" alt="High Temperature Tensile Test">
+    </div>
+  </article>
+
+  <!-- Charpy Impact -->
+  <article class="mech-item alt">
+    <div class="mech-left darkbox">
+      <h2>Charpy Impact Testing</h2>
+      <p>Standardized method to determine energy absorbed by a specimen during fracture (toughness).</p>
+    </div>
+
+    <div class="mech-middle">
+      <table class="mech-table">
+        <thead><tr><th>Specific Test Performed</th><th>Test Method</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>Charpy Impact Test (room / sub-zero)</td>
+            <td>
+              IS 1757 (Pt-1)<br>
+              ISO 148-1<br>
+              ASTM A370<br>
+              ASTM E23<br>
+              ASTM A923 – Method B
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="mech-right">
+      <img src="../assets/testing-service/rock-1.png" alt="Charpy Impact Testing Machine">
+    </div>
+  </article>
+
+  <!-- Hardness (Rockwell / Brinell / Vickers / Portable) -->
+  <article class="mech-item">
+    <div class="mech-left">
+      <h2>Hardness Testing</h2>
+      <p>Evaluates resistance to indentation with multiple scales (Rockwell, Brinell, Vickers) and portable testers.</p>
+
+      <table class="mech-table">
+        <thead><tr><th>Specific Test Performed</th><th>Test Method</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>Rockwell Hardness</td>
+            <td>IS 1586 (Pt-1) / ISO 6508-1 / ASTM E18 / ASTM A370</td>
+          </tr>
+          <tr>
+            <td>Vickers Hardness</td>
+            <td>IS 1501 (Pt-1) / ISO 6507-1 / ASTM E92</td>
+          </tr>
+          <tr>
+            <td>Brinell Hardness</td>
+            <td>IS 1500 (Pt-1) / ISO 6506-1 / ASTM E10</td>
+          </tr>
+          <tr>
+            <td>Portable Hardness</td>
+            <td>ASTM E110</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="mech-right">
+      <img src="../assets/testing-service/rock-2.png" alt="Rockwell / Hardness Machines">
+    </div>
+  </article>
+
+  <!-- Welding Qualification -->
+  <article class="mech-item alt">
+    <div class="mech-left darkbox">
+      <h2>Welding Qualification</h2>
+      <p>Weld procedure &amp; welder qualification testing as per ASME, AWS and ISO standards.</p>
+    </div>
+
+    <div class="mech-middle">
+      <table class="mech-table">
+        <thead><tr><th>Specific Test Performed</th><th>Test Method</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>Weld procedure qualification / Welder performance tests</td>
+            <td>
+              ASME Sec IX<br>
+              AWS D1.1 / D1.1M<br>
+              AWS D1.6 / D1.6M<br>
+              Relevant ISO welding standards
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="mech-right">
+      <img src="../assets/testing-service/welding.png" alt="Weld Qualification">
+    </div>
+  </article>
+
+  <!-- Flaring Test -->
+  <article class="mech-item">
+    <div class="mech-left">
+      <h2>Flaring Test</h2>
+      <p>Used to assess a tube’s ability to expand without cracking during flaring operations.</p>
+
+      <table class="mech-table">
+        <thead><tr><th>Specific Test Performed</th><th>Test Method</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>Flaring / Expansion Test</td>
+            <td>
+              Applicable ISO / ASTM procedures as per material and spec
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="mech-right">
+      <img src="../assets/testing-service/flaring-test.png" alt="Flaring Test">
+    </div>
+  </article>
+
+  <!-- Flattening Test -->
+  <article class="mech-item alt">
+    <div class="mech-left darkbox">
+      <h2>Flattening Test</h2>
+      <p>Checks ductility and strength of pipes / tubes by compressing between plates.</p>
+    </div>
+
+    <div class="mech-middle">
+      <table class="mech-table">
+        <thead><tr><th>Specific Test Performed</th><th>Test Method</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>Flattening / Ductility check</td>
+            <td>
+              Relevant ASTM / ISO methods depending on tube material and spec
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="mech-right">
+      <img src="../assets/testing-service/flattening-test.png" alt="Flattening Test">
+    </div>
+  </article>
+
+  <!-- Fracture Test -->
+  <article class="mech-item">
+    <div class="mech-left">
+      <h2>Fracture Test</h2>
+      <p>Determines material behaviour and resistance when subjected to breaking forces.</p>
+
+      <table class="mech-table">
+        <thead><tr><th>Specific Test Performed</th><th>Test Method</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>Fracture Mechanics / Failure Analysis</td>
+            <td>
+              ASTM standard fracture test methods and relevant ISO procedures
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="mech-right">
+      <img src="../assets/testing-service/fracture-test.png" alt="Fracture Test">
+    </div>
+  </article>
+
+</section>
+
+
+
+
+  <!-- ===== FOOTER (Reuse your footer) ===== -->
+  <footer class="footer-modern">
+    <div class="footer-bottom">
+      <p>© <span id="year"></span> Norden Techlab (OPC) Pvt. Ltd. — All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+  <script>
+ 
+document.addEventListener("DOMContentLoaded", () => {
+  const items = document.querySelectorAll(".mech-item");
+
+  // Alternate animations: left → right → left → right...
+  items.forEach((item, index) => {
+    if (index % 2 === 0) {
+      item.classList.add("left-anim");
+    } else {
+      item.classList.add("right-anim");
+    }
+  });
+
+  // Intersection Observer for reveal effect
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        }
+      });
+    },
+    { threshold: 0.2 }
+  );
+
+  items.forEach(item => observer.observe(item));
+});
+
+
+  </script>
+</body>
+</html>

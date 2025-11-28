@@ -1,0 +1,477 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Norden Techlab (OPC) Pvt Ltd</title>
+  <link rel="icon" href="../assets/logo.png" />
+  <link rel="stylesheet" href="../style.css" />
+
+  <style>
+/* ===== METALLOGRAPHY HERO ===== */
+/* ===== METALLOGRAPHY HERO WITH BACKGROUND VIDEO ===== */
+.metallo-hero {
+  position: relative;
+  height: 55vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  color: #fff;
+}
+
+/* Background Video */
+.metallo-bg-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  z-index: 0;
+}
+
+/* Overlay */
+.metallo-hero .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  z-index: 1;
+}
+
+/* Text */
+.metallo-hero .hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 750px;
+  padding: 20px;
+}
+
+.metallo-hero h1 {
+  font-size: 2.8rem;
+  font-weight: 800;
+}
+
+.metallo-hero p {
+  font-size: 1.1rem;
+  margin-top: 10px;
+  color: #eaeaea;
+}
+
+/* Responsive */
+@media(max-width: 768px) {
+  .metallo-hero {
+    height: 45vh;
+  }
+  .metallo-hero h1 {
+    font-size: 2rem;
+  }
+  .metallo-hero p {
+    font-size: 0.95rem;
+  }
+}
+
+
+
+/* ===== METALLOGRAPHY CONTENT ===== */
+.metallo-content {
+  padding: 90px 6%;
+  background: #f8f8f8;
+}
+.metallo-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+.metallo-text {
+  flex: 1 1 55%;
+}
+.metallo-text h2 {
+  color: #c70039;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+.metallo-text p {
+  font-size: 15px;
+  color: #444;
+  margin-bottom: 16px;
+}
+.metallo-text h3 {
+  margin: 20px 0 14px;
+  font-weight: 700;
+  color: #222;
+}
+
+/* TABLE */
+.metallo-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.07);
+}
+.metallo-table th {
+  background: #285164;
+  color: #fff;
+  padding: 14px;
+  text-align: left;
+  font-weight: 600;
+}
+.metallo-table td {
+  padding: 14px;
+  border-bottom: 1px solid #ddd;
+  vertical-align: top;
+  font-size: 14px;
+}
+.metallo-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* Metallography Image Container */
+.metallo-image {
+  flex: 1 1 35%;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+/* Image */
+.metallo-image img {
+  width: 100%;
+  display: block;
+  transition: transform 1.2s ease, filter 0.4s ease;
+  transform-origin: center;
+}
+
+/* Hover Zoom Effect */
+.metallo-image:hover img {
+  transform: scale(1.12);
+  filter: brightness(1.07);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .metallo-container {
+    flex-direction: column;
+  }
+  .metallo-image {
+    margin-top: 25px;
+    text-align: center;
+  }
+}
+
+
+/* ===== METALLOGRAPHY GALLERY ===== */
+.metallo-gallery {
+  padding: 80px 6%;
+  background: #ffffff;
+  text-align: center;
+}
+
+.gallery-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #c70039;
+  margin-bottom: 10px;
+}
+
+.gallery-sub {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.gallery-item {
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.12);
+}
+
+.gallery-item img {
+  width: 100%;
+  display: block;
+  transition: transform 0.8s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.15);
+}
+
+/* Base animation: fade + slide from bottom */
+.reveal-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.9s ease;
+}
+
+/* When visible */
+.reveal-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger effect for gallery items */
+.gallery-item {
+  transition-delay: var(--delay, 0s);
+}
+
+
+
+</style>
+</head>
+<body>
+
+  <!-- ===== TOP HEADER ===== -->
+  <div class="top-header">
+    <div class="top-inner">
+      <div class="brand">
+        <img src="../assets/logo.png" alt="Norden Techlab logo" class="brand-logo">
+      </div>
+
+      <div class="top-right">
+        <div class="contact">
+          <div class="ci"><span class="ci-icon">📞</span>
+            <div>
+              <small>CUSTOMER SUPPORT & SALES</small>
+              <div class="ci-bold">+91 90037 95625 / 99941 79799</div>
+            </div>
+          </div>
+          <div class="ci"><span class="ci-icon">⏰</span>
+            <div>
+              <small>WORKING TIME</small>
+              <div class="ci-bold">Mon – Sat : 09:30 AM – 6:30 PM</div>
+            </div>
+          </div>
+        </div>
+        <div class="socials">
+          <a href="#">f</a><a href="#">ig</a><a href="#">in</a><a href="#">yt</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- ===== NAVBAR  ===== -->
+<nav class="main-navbar">
+  <ul class="nav-links">
+    <li><a href="../index.html">HOME</a></li>
+    <li><a href="../about.html">ABOUT US</a></li>
+
+    <!-- Proper dropdown -->
+    <li class="dropdown">
+      <button class="dropbtn">TESTING SERVICES</button>
+      <div class="dropdown-content">
+        <a href="chemical-testing.html">CHEMICAL TESTING</a>
+        <a href="mechanical-testing.html">MECHANICAL TESTING</a>
+        <a href="#">METALLOGRAPHY TESTING</a>
+        <a href="corrosion-testing.html">CORROSION TESTING</a>
+      </div>
+    </li>
+
+    <li><a href="../blog.html">BLOG</a></li>
+    <li><a href="../client.html">OUR CLIENTS</a></li>
+    <!-- Proper dropdown -->
+    <li class="dropdown">
+      <button class="dropbtn">ACCREDITION</button>
+      <div class="dropdown-content">
+        <a href="../assets/docs/NORDEN-BROUCHER.pdf" target="_blank">BROUCHER</a>
+        <a href="../assets/docs/NORDEN-CERTIFICATE.pdf" target="_blank">NABL CERTICATE</a>
+        <a href="../assets/docs/NORDEN-SCOPE.pdf" target="_blank">NABL SCOPE</a>
+      </div>
+    </li>
+    <li><a href="../award.html">AWARDS & ACHIEVEMENTS</a></li>
+    <li><a href="../contact.html">CONTACT US</a></li>
+  </ul>
+</nav>
+
+<!-- ===== METALLOGRAPHY TESTING HERO ===== -->
+<section class="metallo-hero">
+
+  <!-- Background Video -->
+  <video class="metallo-bg-video" autoplay muted loop playsinline>
+    <source src="../assets/video/about.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
+
+  <!-- Overlay -->
+  <div class="overlay"></div>
+
+  <!-- Hero Content -->
+  <div class="hero-content">
+    <h1>Metallography Testing</h1>
+    <p>Microstructural evaluation of metals and alloys using precision microscopy techniques.</p>
+  </div>
+
+</section>
+
+<!-- ===== METALLOGRAPHY TESTING SECTION ===== -->
+<section class="metallo-content reveal-up">
+  <div class="metallo-container">
+
+    <!-- Left Text -->
+    <div class="metallo-text reveal-up">
+      <h2>Metallography Test</h2>
+      <p>
+        Metallography involves examining the microstructure of metals and alloys, typically using advanced microscopic 
+        techniques. This analysis is vital for understanding material properties such as grain size, crystal structure, 
+        defects, inclusions, weld quality, and failure mechanisms.
+      </p>
+      <p>
+        It is widely used in aerospace, automotive, foundries, heat-treatment plants, and general manufacturing sectors.
+      </p>
+
+      <h3>Tests Performed</h3>
+
+      <!-- TABLE -->
+      <table class="metallo-table reveal-up">
+        <thead>
+          <tr>
+            <th>Specific Test Performed</th>
+            <th>Test Method</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>
+              Microstructure<br>
+              Macrostructure<br>
+              Graphite in cast iron (nodular, grey, malleable)<br>
+              Grain size (ASTM chart comparison)<br>
+              Decarburization depth<br>
+              Inclusion rating
+            </td>
+
+            <td>
+              IS 7754 (Part-1)<br>
+              ISO 945-1<br>
+              ASTM A247<br>
+              ASTM A923 – Method A<br>
+              ASTM A923 – Test Method C<br>
+              ASTM E562<br>
+              ISO 17781<br>
+              ISO 17639<br>
+              ASME SEC IX, QW-183 & QW-184<br>
+              ASM Handbook Volume 9: 2004<br>
+              IS 4748<br>
+              ASTM E112<br>
+              IS 6396<br>
+              ISO 3887<br>
+              ASTM E1077<br>
+              ASTM E45<br>
+              IS 4163<br>
+              ISO 4967<br>
+              ASTM E381<br>
+              AWS D1.1 / D1.1M (Clause 6.10.4)<br>
+              AWS D1.6 / D1.6M (Clause 6.9.3.4)<br>
+              IS 11371
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Right Image -->
+    <div class="metallo-image reveal-up">
+      <img src="../assets/testing-service/mettallography.png" alt="Metallography Microscope">
+    </div>
+
+  </div>
+</section>
+
+
+
+<!-- ===== MICROSTRUCTURE GALLERY SECTION ===== -->
+<section class="metallo-gallery reveal-up">
+  <h2 class="gallery-title reveal-up">Microstructure Output Gallery</h2>
+  <p class="gallery-sub reveal-up">Explore sample metallographic images captured during microstructure analysis.</p>
+
+  <div class="gallery-grid">
+
+    <!-- All 30 images with reveal-up stagger -->
+    <div class="gallery-item reveal-up"><img src="../assets/testing-service/outputs/mettalography-output-1.jpg" alt="Sample 1"></div>
+    <div class="gallery-item reveal-up"><img src="../assets/testing-service/outputs/mettalography-output-2.jpg" alt="Sample 2"></div>
+    <div class="gallery-item reveal-up"><img src="../assets/testing-service/outputs/mettalography-output-3.jpg" alt="Sample 3"></div>
+    <div class="gallery-item reveal-up"><img src="../assets/testing-service/outputs/mettalography-output-4.jpg" alt="Sample 4"></div>
+    <div class="gallery-item reveal-up"><img src="../assets/testing-service/outputs/mettalography-output-5.jpg" alt="Sample 5"></div>
+    <div class="gallery-item reveal-up"><img src="../assets/testing-service/outputs/mettalography-output-6.jpg" alt="Sample 6"></div>
+    <div class="gallery-item reveal-up"><img src="../assets/testing-service/outputs/mettalography-output-7.jpg" alt="Sample 7"></div>
+    <div class="gallery-item reveal-up"><img src="../assets/testing-service/outputs/mettalography-output-8.jpg" alt="Sample 8"></div>
+    <div class="gallery-item reveal-up"><img src="../assets/testing-service/outputs/mettalography-output-9.jpg" alt="Sample 9"></div>
+
+    <div class="gallery-item reveal-up"><img src="../assets/testing-service/outputs/mettalography-output-10.jpg" alt="Sample 10"></div>
+    <div class="gallery-item reveal-up"><img src="../assets/testing-service/outputs/mettalography-output-11.jpg" alt="Sample 11"></div>
+    <div class="gallery-item reveal-up"><img src="../assets/testing-service/outputs/mettalography-output-12.jpg" alt="Sample 12"></div>
+    <div class="gallery-item reveal-up"><img src="../assets/testing-service/outputs/mettalography-output-13.jpg" alt="Sample 13"></div>
+    <div class="gallery-item reveal-up"><img src="../assets/testing-service/outputs/mettalography-output-14.jpg" alt="Sample 14"></div>
+    <div class="gallery-item reveal-up"><img src="../assets/testing-service/outputs/mettalography-output-15.jpg" alt="Sample 15"></div>
+    <div class="gallery-item reveal-up"><img src="../assets/testing-service/outputs/mettalography-output-16.jpg" alt="Sample 16"></div>
+    <div class="gallery-item reveal-up"><img src="../assets/testing-service/outputs/mettalography-output-17.jpg" alt="Sample 17"></div>
+    <div class="gallery-item reveal-up"><img src="../assets/testing-service/outputs/mettalography-output-18.jpg" alt="Sample 18"></div>
+
+    <div class="gallery-item reveal-up"><img src="../assets/testing-service/outputs/mettalography-output-19.jpg" alt="Sample 19"></div>
+    <div class="gallery-item reveal-up"><img src="../assets/testing-service/outputs/mettalography-output-20.jpg" alt="Sample 20"></div>
+    <div class="gallery-item reveal-up"><img src="../assets/testing-service/outputs/mettalography-output-21.jpg" alt="Sample 21"></div>
+    <div class="gallery-item reveal-up"><img src="../assets/testing-service/outputs/mettalography-output-22.jpg" alt="Sample 22"></div>
+    <div class="gallery-item reveal-up"><img src="../assets/testing-service/outputs/mettalography-output-23.jpg" alt="Sample 23"></div>
+    <div class="gallery-item reveal-up"><img src="../assets/testing-service/outputs/mettalography-output-24.jpg" alt="Sample 24"></div>
+    <div class="gallery-item reveal-up"><img src="../assets/testing-service/outputs/mettalography-output-25.jpg" alt="Sample 25"></div>
+    <div class="gallery-item reveal-up"><img src="../assets/testing-service/outputs/mettalography-output-26.jpg" alt="Sample 26"></div>
+    <div class="gallery-item reveal-up"><img src="../assets/testing-service/outputs/mettalography-output-27.jpg" alt="Sample 27"></div>
+
+    <div class="gallery-item reveal-up"><img src="../assets/testing-service/outputs/mettalography-output-28.jpg" alt="Sample 28"></div>
+    <div class="gallery-item reveal-up"><img src="../assets/testing-service/outputs/mettalography-output-29.jpg" alt="Sample 29"></div>
+    <div class="gallery-item reveal-up"><img src="../assets/testing-service/outputs/mettalography-output-30.jpg" alt="Sample 30"></div>
+
+  </div>
+</section>
+
+
+
+  
+
+
+
+  <!-- ===== FOOTER (Reuse your footer) ===== -->
+  <footer class="footer-modern">
+    <div class="footer-bottom">
+      <p>© <span id="year"></span> Norden Techlab (OPC) Pvt. Ltd. — All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+  <script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  const revealElements = document.querySelectorAll(".reveal-up");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, index) => {
+      if (entry.isIntersecting) {
+
+        // Add small stagger delay
+        entry.target.style.transitionDelay = (index * 0.10) + "s";
+
+        entry.target.classList.add("show");
+      }
+    });
+  }, { threshold: 0.2 });
+
+  revealElements.forEach(el => observer.observe(el));
+});
+</script>
+
+</body>
+</html>

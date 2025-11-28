@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Norden Techlab | Clients</title>
+  <link rel="icon" href="assets/logo.png" />
+  <link rel="stylesheet" href="style.css" />
+
+<style>
+/* ===== CLIENT COMING SOON FULLSCREEN SECTION ===== */
+.client-comingsoon {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Background Video */
+.client-bg-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  z-index: -2;
+}
+
+/* Overlay */
+.client-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  z-index: -1;
+}
+
+/* Text Content */
+.client-content {
+  text-align: center;
+  color: #fff;
+  max-width: 650px;
+  padding: 20px;
+  animation: fadeUp 1.1s ease-out forwards;
+}
+
+.client-content h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 15px;
+  text-shadow: 0 0 10px rgba(199, 0, 57, 0.6);
+}
+
+.client-content p {
+  font-size: 1.25rem;
+  color: #f1f1f1;
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+/* Button */
+.client-btn {
+  padding: 12px 30px;
+  background: #c70039;
+  color: #fff;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 0 15px rgba(199,0,57,0.5);
+  transition: .3s ease;
+}
+
+.client-btn:hover {
+  background: #8a0027;
+  box-shadow: 0 0 20px rgba(199,0,57,0.8);
+}
+
+/* Animation */
+@keyframes fadeUp {
+  from { opacity:0; transform:translateY(40px); }
+  to   { opacity:1; transform:translateY(0); }
+}
+
+/* Responsive */
+@media(max-width:768px) {
+  .client-content h1 { font-size: 2.3rem; }
+  .client-content p { font-size: 1rem; }
+}
+</style>
+
+</head>
+<body>
+
+<!-- ===== TOP HEADER ===== -->
+<div class="top-header">
+  <div class="top-inner">
+    <div class="brand">
+      <img src="assets/logo.png" alt="Norden Techlab logo" class="brand-logo">
+    </div>
+
+    <div class="top-right">
+      <div class="contact">
+        <div class="ci"><span class="ci-icon">📞</span>
+          <div>
+            <small>CUSTOMER SUPPORT & SALES</small>
+            <div class="ci-bold">+91 90037 95625 / 99941 79799</div>
+          </div>
+        </div>
+        <div class="ci"><span class="ci-icon">⏰</span>
+          <div>
+            <small>WORKING TIME</small>
+            <div class="ci-bold">Mon – Sat : 09:30 AM – 6:30 PM</div>
+          </div>
+        </div>
+      </div>
+      <div class="socials">
+        <a href="#">f</a><a href="#">ig</a><a href="#">in</a><a href="#">yt</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== NAVBAR ===== -->
+<nav class="main-navbar">
+  <ul class="nav-links">
+    <li><a href="index.html">HOME</a></li>
+    <li><a href="about.html">ABOUT US</a></li>
+
+    <li class="dropdown">
+      <button class="dropbtn">TESTING SERVICES</button>
+      <div class="dropdown-content">
+        <a href="Testing-services/chemical-testing.html">CHEMICAL TESTING</a>
+        <a href="Testing-services/mechanical-testing.html">MECHANICAL TESTING</a>
+        <a href="Testing-services/mettallography-testing.html">METALLOGRAPHY TESTING</a>
+        <a href="Testing-services/corrosion-testing.html">CORROSION TESTING</a>
+      </div>
+    </li>
+
+    <li><a href="blog.html">BLOG</a></li>
+    <li><a href="#">OUR CLIENTS</a></li>
+
+    <li class="dropdown">
+      <button class="dropbtn">ACCREDITION</button>
+      <div class="dropdown-content">
+        <a href="assets/docs/NORDEN-BROUCHER.pdf" target="_blank">BROUCHER</a>
+        <a href="assets/docs/NORDEN-CERTIFICATE.pdf" target="_blank">NABL CERTICATE</a>
+        <a href="assets/docs/NORDEN-SCOPE.pdf" target="_blank">NABL SCOPE</a>
+      </div>
+    </li>
+
+    <li><a href="award.html">AWARDS & ACHIEVEMENTS</a></li>
+    <li><a href="contact.html">CONTACT US</a></li>
+  </ul>
+</nav>
+
+
+<!-- ===== CLIENT COMING SOON SECTION ===== -->
+<section class="client-comingsoon">
+
+  <video class="client-bg-video" autoplay muted loop playsinline>
+    <source src="assets/video/about.mp4" type="video/mp4">
+  </video>
+
+  <div class="client-overlay"></div>
+
+  <div class="client-content">
+    <h1>🧩 Our Clients Page is Coming Soon</h1>
+    <p>We are compiling our trusted network of clients across industries.  
+       A showcase of excellence will be available shortly.</p>
+
+    <a href="contact.html" class="client-btn">Contact Us</a>
+  </div>
+
+</section>
+
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer-modern">
+  <div class="footer-bottom">
+    <p>© <span id="year"></span> Norden Techlab (OPC) Pvt. Ltd. — All Rights Reserved.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

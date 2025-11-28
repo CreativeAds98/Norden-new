@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Norden Techlab (OPC) Pvt Ltd</title>
+  <link rel="icon" href="../assets/logo.png" />
+  <link rel="stylesheet" href="../style.css" />
+
+  <style>
+/* ===== CHEMICAL TESTING HERO SECTION ===== */
+
+/* Chemical Hero Section with Background Video */
+.chemical-hero {
+  position: relative;
+  height: 75vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  overflow: hidden;
+}
+
+.chemical-bg-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -2;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+}
+
+.chemical-hero .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  z-index: -1;
+}
+
+.chemical-hero .hero-content {
+  text-align: center;
+  max-width: 700px;
+  padding: 20px;
+  animation: fadeUp 1.2s ease-out forwards;
+}
+
+.chemical-hero h1 {
+  font-size: 3rem;
+  font-weight: 800;
+}
+
+.chemical-hero p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  opacity: 0.9;
+}
+
+/* Smooth appear animation */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media(max-width: 768px) {
+  .chemical-hero {
+    height: 55vh;
+  }
+  .chemical-hero h1 {
+    font-size: 2rem;
+  }
+  .chemical-hero p {
+    font-size: 1rem;
+  }
+}
+
+/* ===== CONTENT SECTION ===== */
+.chemical-content {
+  background: #f7f7f7;
+  padding: 90px 6%;
+}
+.chemical-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 50px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.chemical-text {
+  flex: 1 1 55%;
+}
+.chemical-text h2 {
+  color: #c70039;
+  font-weight: 800;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+.chemical-text p {
+  color: #333;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+.chemical-text ul {
+  list-style: disc;
+  margin-left: 20px;
+  color: #333;
+  line-height: 1.8;
+}
+.chemical-image {
+  flex: 1 1 35%;
+  text-align: right;
+}
+.chemical-image img {
+  max-width: 100%;
+  height: 350px;
+  border-radius: 8px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .chemical-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .chemical-image {
+    text-align: center;
+    margin-top: 30px;
+  }
+  .chemical-text ul {
+    list-style-position: inside;
+  }
+}
+
+/* Chemical Image Container */
+.chemical-image {
+  flex: 1 1 35%;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+/* Chemical Image Zoom */
+.chemical-image img {
+  width: 100%;
+  display: block;
+  transform-origin: center;
+  transition: transform 1.2s ease, filter 0.4s ease;
+}
+
+/* Hover Effect */
+.chemical-image:hover img {
+  transform: scale(1.12);
+  filter: brightness(1.07);
+}
+
+/* ===== SLIDE UP (FROM DOWN) ANIMATION ===== */
+
+.reveal-up {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 1s ease;
+}
+
+.reveal-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+</style>
+</head>
+<body>
+
+  <!-- ===== TOP HEADER ===== -->
+  <div class="top-header">
+    <div class="top-inner">
+      <div class="brand">
+        <img src="../assets/logo.png" alt="Norden Techlab logo" class="brand-logo">
+      </div>
+
+      <div class="top-right">
+        <div class="contact">
+          <div class="ci"><span class="ci-icon">📞</span>
+            <div>
+              <small>CUSTOMER SUPPORT & SALES</small>
+              <div class="ci-bold">+91 90037 95625 / 99941 79799</div>
+            </div>
+          </div>
+          <div class="ci"><span class="ci-icon">⏰</span>
+            <div>
+              <small>WORKING TIME</small>
+              <div class="ci-bold">Mon – Sat : 09:30 AM – 6:30 PM</div>
+            </div>
+          </div>
+        </div>
+        <div class="socials">
+          <a href="#">f</a><a href="#">ig</a><a href="#">in</a><a href="#">yt</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- ===== NAVBAR  ===== -->
+<nav class="main-navbar">
+  <ul class="nav-links">
+    <li><a href="../index.html">HOME</a></li>
+    <li><a href="../about.html">ABOUT US</a></li>
+
+    <!-- Proper dropdown -->
+    <li class="dropdown">
+      <button class="dropbtn">TESTING SERVICES</button>
+      <div class="dropdown-content">
+        <a href="#">CHEMICAL TESTING</a>
+        <a href="mechanical-testing.html">MECHANICAL TESTING</a>
+        <a href="mettallography-testing.html">METALLOGRAPHY TESTING</a>
+        <a href="corrosion-testing.html">CORROSION TESTING</a>
+      </div>
+    </li>
+
+    <li><a href="../blog.html">BLOG</a></li>
+    <li><a href="../client.html">OUR CLIENTS</a></li>
+    <!-- Proper dropdown -->
+    <li class="dropdown">
+      <button class="dropbtn">ACCREDITION</button>
+      <div class="dropdown-content">
+        <a href="../assets/docs/NORDEN-BROUCHER.pdf" target="_blank">BROUCHER</a>
+        <a href="../assets/docs/NORDEN-CERTIFICATE.pdf" target="_blank">NABL CERTICATE</a>
+        <a href="../assets/docs/NORDEN-SCOPE.pdf" target="_blank">NABL SCOPE</a>
+      </div>
+    </li>
+    <li><a href="../award.html">AWARDS & ACHIEVEMENTS</a></li>
+    <li><a href="../contact.html">CONTACT US</a></li>
+  </ul>
+</nav>
+
+
+ <!-- ===== CHEMICAL TESTING HERO ===== -->
+<section class="chemical-hero">
+  <!-- Background Video -->
+  <video class="chemical-bg-video" autoplay muted loop playsinline>
+    <source src="../assets/video/about.mp4" type="video/mp4">
+  </video>
+
+  <div class="overlay"></div>
+
+  <div class="hero-content">
+    <h1>Chemical Testing</h1>
+    <p>Accurate analysis of metals and alloys for quality and composition verification.</p>
+  </div>
+</section>
+
+<!-- ===== CHEMICAL TESTING DETAILS ===== -->
+<section class="chemical-content">
+  <div class="chemical-container reveal-up">
+    <div class="chemical-text">
+      <h2>Chemical Testing</h2>
+      <p>Materials tested include:</p>
+      <ul>
+        <li>Plain carbon and low-alloy steels</li>
+        <li>Stainless steels and high chromium/nickel steels</li>
+        <li>Tool steels</li>
+        <li>Maraging steels</li>
+        <li>Cast irons and SG iron</li>
+        <li>Ni-Hard and Ni-Resist alloys</li>
+        <li>Nickel-based alloys such as Monel, Inconel, and Hastelloy</li>
+      </ul>
+    </div>
+
+    <div class="chemical-image">
+      <img src="../assets/testing-service/chemical.png" alt="Chemical Equipment">
+    </div>
+  </div>
+</section>
+
+
+
+  <!-- ===== FOOTER (Reuse your footer) ===== -->
+  <footer class="footer-modern">
+    <div class="footer-bottom">
+      <p>© <span id="year"></span> Norden Techlab (OPC) Pvt. Ltd. — All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+  
+    <script>
+document.addEventListener("DOMContentLoaded", () => {
+  const revealElements = document.querySelectorAll(".reveal-up");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      }
+    });
+  }, { threshold: 0.2 });
+
+  revealElements.forEach(el => observer.observe(el));
+});
+
+
+  </script>
+</body>
+</html>
